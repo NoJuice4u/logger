@@ -1,5 +1,11 @@
 import datetime
+import os
+
+os.system('')
+RED = '\033[91m'   # mode 31 = red forground
+GREEN = '\033[92m' 
+RESET = '\033[0m'  # mode 0  = reset
 
 def log(category, message):
     now = datetime.datetime.now()
-    print("[" + now.strftime('%Y-%m-%dT%H:%M:%S.%f') + "]\t[" + category + "]" + "\t" + message)
+    print("[" + GREEN + now.strftime('%Y-%m-%dT%H:%M:%S.%f') + RESET + "]\t[" + category + "]" + "\t" + message)
